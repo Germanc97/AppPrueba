@@ -10,7 +10,7 @@ namespace AppPrueba.Models
         #region properties
 
 
-        private int identificacion;
+        private string identificacion;
 
         public string nombre { get; set; }
 
@@ -31,7 +31,7 @@ namespace AppPrueba.Models
 
         #region Getters/Setters
 
-        public int Identificacion
+        public string Identificacion
         {
             get { return identificacion; }
             set

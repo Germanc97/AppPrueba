@@ -51,9 +51,9 @@ namespace AppPrueba.Services.Database
             return App.Database.connection.UpdateAsync(item);
         }
 
-        public Task<List<T>> ConsultaPorIdentificacion(long numero)
+        public Task<List<T>> ConsultaPorIdentificacion(string numero)
         {
-            return App.Database.connection.Table<T>().Where(i => i.Identificacion == numero).ToListAsync();
+            return App.Database.connection.Table<T>().Where(i => i.Identificacion.Contains(numero)).ToListAsync();
         }
 
     }

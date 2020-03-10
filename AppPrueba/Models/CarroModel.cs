@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using SQLite;
+using SQLiteNetExtensions.Attributes; 
+
 namespace AppPrueba.Models
 {
     public class CarroModel : NotificationObject
@@ -17,6 +21,12 @@ namespace AppPrueba.Models
         public string Modelo { get; set; }
 
         private double tanque;
+
+        [PrimaryKey, AutoIncrement]
+        public int CarroId { get; set; }
+
+        [ForeignKey(typeof(UsuarioModel))]
+        public int UsuarioId { get; set; }
 
         #endregion
 

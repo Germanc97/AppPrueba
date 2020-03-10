@@ -34,6 +34,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Database\DataBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Database\IServiceDataBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Database\IUserDataBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Database\ICarroDataBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UsuarioModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Database\IUsuarioDataBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Database\UsuarioDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Database\CarroDataBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />

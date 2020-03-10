@@ -7,9 +7,10 @@ namespace AppPrueba.Services.Database
 {
     public interface IUsuarioDataBase<T> : IServiceDataBase<T> where T : class, new()
     {
-        Task<int> InsertWithChildrenAsync(UsuarioModel item);
+        Task InsertWithChildrenAsync(UsuarioModel item);
 
         Task<List<T>> GetAllItemsWithChildrenAsync();
 
+        Task<List<T>> ConsutltaPorIdentificacion(long numero);
     }
 }

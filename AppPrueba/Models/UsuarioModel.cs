@@ -5,9 +5,20 @@ using SQLiteNetExtensions.Attributes;
 
 namespace AppPrueba.Models
 {
-    public class UsuarioModel
+    public class UsuarioModel : NotificationObject
     {
         #region properties
+
+
+        private int identificacion;
+
+        public string nombre { get; set; }
+
+        public string apellido { get; set; }
+
+        public string edad { get; set; }
+
+
 
         [PrimaryKey, AutoIncrement]
         public int UsuarioId { get; set; }
@@ -16,13 +27,23 @@ namespace AppPrueba.Models
 
         public List<CarroModel> Carros { get; set; }
 
-    
-
-
         #endregion properties
 
+        #region Getters/Setters
+
+        public int Identificacion
+        {
+            get { return identificacion; }
+            set
+            {
+                identificacion = value;
+                OnPropertyChanged();
+            }
+        }
 
 
+
+        #endregion
 
         public UsuarioModel()
         {

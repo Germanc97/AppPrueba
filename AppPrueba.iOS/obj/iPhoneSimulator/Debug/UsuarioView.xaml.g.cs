@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppPrueba.iOS.UsuarioView.xaml", "UsuarioView.xaml", typeof(global::AppPrueba.VIewModels.UsuarioView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppPrueba.iOS.UsuarioView.xaml", "UsuarioView.xaml", typeof(global::AppPrueba.Views.UsuarioView))]
 
-namespace AppPrueba.VIewModels {
+namespace AppPrueba.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/germancaycedo/Projects/AppPrueba/AppPrueba/VIewModels/UsuarioView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/germancaycedo/Projects/AppPrueba/AppPrueba/Views/UsuarioView.xaml")]
     public partial class UsuarioView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

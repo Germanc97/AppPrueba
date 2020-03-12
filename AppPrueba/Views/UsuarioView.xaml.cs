@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace AppPrueba.VIewModels
+namespace AppPrueba.Views
 {
     public partial class UsuarioView : ContentPage
     {

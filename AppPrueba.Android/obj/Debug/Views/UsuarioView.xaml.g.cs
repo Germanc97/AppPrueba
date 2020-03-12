@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppPrueba.Droid.Views.UsuarioView.xaml", "Views/UsuarioView.xaml", typeof(global::AppPrueba.Views.MyPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppPrueba.Droid.Views.UsuarioView.xaml", "Views/UsuarioView.xaml", typeof(global::AppPrueba.Views.UsuarioView))]
 
 namespace AppPrueba.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/germancaycedo/Projects/AppPrueba/AppPrueba/Views/UsuarioView.xaml")]
-    public partial class MyPage : global::Xamarin.Forms.ContentPage {
+    public partial class UsuarioView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MyPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UsuarioView));
         }
     }
 }

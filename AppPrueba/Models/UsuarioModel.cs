@@ -65,8 +65,6 @@ namespace AppPrueba.Models
             }
         }
 
-
-
         #endregion
 
         public UsuarioModel()

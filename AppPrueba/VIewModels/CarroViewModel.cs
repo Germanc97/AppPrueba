@@ -18,6 +18,8 @@ namespace AppPrueba.VIewModels
 
         public int DatoGuardado { get; set; }
 
+        public UsuarioModel Usuario1 { get; set; }
+
         //servicios
 
             public IUsuarioDataBase<UsuarioModel> ServicioUsuarioDB { get; set; }
@@ -47,6 +49,7 @@ namespace AppPrueba.VIewModels
             //}
 
             ServicioUsuarioDB = new UsuarioDatabase<UsuarioModel>();
+            GuardarUsuario();
 
         }
 
@@ -63,7 +66,7 @@ namespace AppPrueba.VIewModels
 
         public async Task GuardarUsuario()
         {
-            UsuarioModel usuario1 = new UsuarioModel()
+            Usuario1 = new UsuarioModel()
             {
                 Identificacion = "12345678",
                 Nombre = "Carlos",
@@ -73,6 +76,7 @@ namespace AppPrueba.VIewModels
                 Email = "carlos@email.com"
 
             };
+            await Task.FromResult(true);
         }
 
         #endregion Metodos

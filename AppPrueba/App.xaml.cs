@@ -54,10 +54,10 @@ namespace AppPrueba
 
         protected override async void OnStart()
         {
-            await MemoryHandler.SaveData("valorGuardado", 25);
-            await MemoryHandler.GetData("perro");
-            await MemoryHandler.GetData("valorGuardado");
-            MainPage = new CarroView();
+            //await MemoryHandler.SaveData("valorGuardado", 25);
+            //await MemoryHandler.GetData("perro");
+            //await MemoryHandler.GetData("valorGuardado");
+            MainPage = new UsuarioView();
         }
 
         protected override void OnSleep()

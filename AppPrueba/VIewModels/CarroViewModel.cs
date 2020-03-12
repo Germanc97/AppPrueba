@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using AppPrueba.Models;
@@ -12,17 +13,24 @@ namespace AppPrueba.VIewModels
         #region Properties
 
         public CarroModel Carro { get; set; }
+
         public CarroModel CarroVista { get; set; }
 
         public ICommand ActualizarDatosCommand { get; set; }
 
+        public ICommand GuardarDatosCommand { get; set; }
+
+        public ICommand BorrarDatosCommand { get; set; }
+
         public int DatoGuardado { get; set; }
+
+        public int id { get; set; }
 
         public UsuarioModel Usuario1 { get; set; }
 
         //servicios
 
-            public IUsuarioDataBase<UsuarioModel> ServicioUsuarioDB { get; set; }
+        public IUsuarioDataBase<UsuarioModel> ServicioUsuarioDB { get; set; }
 
         #endregion Properties
 
@@ -49,8 +57,9 @@ namespace AppPrueba.VIewModels
             //}
 
             ServicioUsuarioDB = new UsuarioDatabase<UsuarioModel>();
-            GuardarUsuario();
-
+            GuardarDatosCommand = new Command(async () => await GuardarUsuario(), () => true);
+            Usuario1 = new UsuarioModel();
+            BorrarDatosCommand = new Command(async () => await BorrarUsuario(), () => true);
         }
 
         #endregion Initialize
@@ -66,18 +75,38 @@ namespace AppPrueba.VIewModels
 
         public async Task GuardarUsuario()
         {
-            Usuario1 = new UsuarioModel()
+            UsuarioModel usuario2 = new UsuarioModel()
             {
-                Identificacion = "12345678",
-                Nombre = "Carlos",
-                Apellido = "Perez",
-                Edad = 23,
+                Identificacion = "12445678",
+                Nombre = "Andres",
+                Apellido = "Salazar",
+                Edad = 25,
                 Pass = "1234",
-                Email = "carlos@email.com"
-
+                Email = "andreswebcam@sexy.com"
             };
+            int id = await ServicioUsuarioDB.InsertItemAsync(usuario2);
+            Thread.Sleep(500);
+            UsuarioModel usuario3 = await ServicioUsuarioDB.GetItemAsync(id);
+
+            Usuario1.Identificacion = usuario3.Identificacion;
+            Usuario1.Nombre = usuario3.Nombre;
+            Usuario1.Apellido = usuario3.Apellido;
+            Usuario1.Edad = usuario3.Edad;
+            Usuario1.Pass = usuario3.Pass;
+            Usuario1.Email = usuario3.Email;
+
+            Usuario1 = new UsuarioModel();
+
             await Task.FromResult(true);
         }
+
+        public async Task BorrarUsuario()
+        {
+            Thread.Sleep(500);
+            await Task.FromResult(true);
+        }
+
+
 
         #endregion Metodos
 

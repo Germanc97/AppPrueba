@@ -60,7 +60,6 @@
 /Users/germancaycedo/Projects/AppPrueba/AppPrueba.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro-13.3/coremlc/_PartialAppManifest.items
 /Users/germancaycedo/Projects/AppPrueba/AppPrueba.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro-13.3/coremlc/_BundleResourceWithLogicalName.items
 /Users/germancaycedo/Projects/AppPrueba/AppPrueba.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro-13.3/optimized/
-/Users/germancaycedo/Projects/AppPrueba/AppPrueba.iOS/obj/iPhoneSimulator/Debug/AppPrueba.iOS.csprojAssemblyReference.cache
 /Users/germancaycedo/Projects/AppPrueba/AppPrueba.iOS/obj/iPhoneSimulator/Debug/App.xaml.g.cs
 /Users/germancaycedo/Projects/AppPrueba/AppPrueba.iOS/obj/iPhoneSimulator/Debug/MainPage.xaml.g.cs
 /Users/germancaycedo/Projects/AppPrueba/AppPrueba.iOS/obj/iPhoneSimulator/Debug/Views/CarroView.xaml.g.cs

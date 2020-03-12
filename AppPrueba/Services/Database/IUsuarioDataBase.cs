@@ -11,6 +11,6 @@ namespace AppPrueba.Services.Database
 
         Task<List<T>> GetAllItemsWithChildrenAsync();
 
-        Task<List<T>> ConsultaPorIdentificacion(long numero);
+        Task<List<T>> ConsultaPorIdentificacion(string numero);
     }
 }

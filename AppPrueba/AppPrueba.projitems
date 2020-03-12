@@ -15,6 +15,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)VIewModels\UsuarioView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -39,6 +43,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Database\IUsuarioDataBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Database\UsuarioDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Database\CarroDataBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VIewModels\UsuarioView.xaml.cs">
+      <DependentUpon>UsuarioView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />

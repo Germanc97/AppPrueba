@@ -12,11 +12,15 @@ namespace AppPrueba.Models
 
         private string identificacion;
 
-        public string nombre { get; set; }
+        public string Nombre { get; set; }
 
-        public string apellido { get; set; }
+        public string Apellido { get; set; }
 
-        public string edad { get; set; }
+        private int edad;
+
+        public string Pass { get; set; }
+
+        private string email;
 
 
 
@@ -37,6 +41,26 @@ namespace AppPrueba.Models
             set
             {
                 identificacion = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set
+            {
+                email = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int Edad
+        {
+            get { return edad; }
+            set
+            {
+                edad = value;
                 OnPropertyChanged();
             }
         }
